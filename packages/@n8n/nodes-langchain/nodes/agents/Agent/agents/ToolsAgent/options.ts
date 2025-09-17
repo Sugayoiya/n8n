@@ -35,4 +35,16 @@ export const commonOptions: INodeProperties[] = [
 		description:
 			'Whether or not binary images should be automatically passed through to the agent as image type messages',
 	},
+	{
+		displayName: 'Context Window Size',
+		name: 'contextWindowSize',
+		type: 'number',
+		default: 10,
+		description:
+			'Maximum number of conversation turns (messages) to keep in memory. Older messages will be automatically removed to save tokens. Set to 0 to keep all messages.',
+		typeOptions: {
+			minValue: 0,
+			maxValue: 100,
+		},
+	},
 ];
